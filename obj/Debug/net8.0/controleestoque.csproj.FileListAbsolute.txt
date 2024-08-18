@@ -1,0 +1,14 @@
+C:\Users\guilherme\Desktop\ads facul\controleestoque\bin\Debug\net8.0\controleestoque.exe
+C:\Users\guilherme\Desktop\ads facul\controleestoque\bin\Debug\net8.0\controleestoque.deps.json
+C:\Users\guilherme\Desktop\ads facul\controleestoque\bin\Debug\net8.0\controleestoque.runtimeconfig.json
+C:\Users\guilherme\Desktop\ads facul\controleestoque\bin\Debug\net8.0\controleestoque.dll
+C:\Users\guilherme\Desktop\ads facul\controleestoque\bin\Debug\net8.0\controleestoque.pdb
+C:\Users\guilherme\Desktop\ads facul\controleestoque\obj\Debug\net8.0\controleestoque.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\guilherme\Desktop\ads facul\controleestoque\obj\Debug\net8.0\controleestoque.AssemblyInfoInputs.cache
+C:\Users\guilherme\Desktop\ads facul\controleestoque\obj\Debug\net8.0\controleestoque.AssemblyInfo.cs
+C:\Users\guilherme\Desktop\ads facul\controleestoque\obj\Debug\net8.0\controleestoque.csproj.CoreCompileInputs.cache
+C:\Users\guilherme\Desktop\ads facul\controleestoque\obj\Debug\net8.0\controleestoque.dll
+C:\Users\guilherme\Desktop\ads facul\controleestoque\obj\Debug\net8.0\refint\controleestoque.dll
+C:\Users\guilherme\Desktop\ads facul\controleestoque\obj\Debug\net8.0\controleestoque.pdb
+C:\Users\guilherme\Desktop\ads facul\controleestoque\obj\Debug\net8.0\controleestoque.genruntimeconfig.cache
+C:\Users\guilherme\Desktop\ads facul\controleestoque\obj\Debug\net8.0\ref\controleestoque.dll
