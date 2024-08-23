@@ -12,3 +12,4 @@ C:\Users\guilherme\Desktop\ads facul\controleestoque\obj\Debug\net8.0\refint\con
 C:\Users\guilherme\Desktop\ads facul\controleestoque\obj\Debug\net8.0\controleestoque.pdb
 C:\Users\guilherme\Desktop\ads facul\controleestoque\obj\Debug\net8.0\controleestoque.genruntimeconfig.cache
 C:\Users\guilherme\Desktop\ads facul\controleestoque\obj\Debug\net8.0\ref\controleestoque.dll
+C:\Users\guilherme\Desktop\ads facul\controleestoque\obj\Debug\net8.0\controleestoque.sourcelink.json
