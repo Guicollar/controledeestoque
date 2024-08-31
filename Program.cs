@@ -39,10 +39,11 @@ class Program
                     Opcao3();
                     break;
                 case "4":
-                    Console.WriteLine("opção 4");
+                    Opcao4();
+
                     break;
                 case "5":
-                    Console.WriteLine("opção 5");
+                    Opcao5();
                     break;
                 case "0":
                     Console.WriteLine("Saindo");
@@ -50,7 +51,7 @@ class Program
             }   
             Menu();
     }
-static Estoque estoque = new Estoque();
+    static Estoque estoque = new Estoque();
     static void Opcao1(){
         Console.WriteLine(" digite o nome do material");
         string nome = Console.ReadLine();
@@ -67,21 +68,45 @@ static Estoque estoque = new Estoque();
         
     
     }
-static void Opcao2(){
-    estoque.ListarProdutos();
-}
-
-static void Opcao3(){
-    Console.WriteLine(" digite o numero do produto em sua lista ");
-    string numero = Console.ReadLine();
-    if (int.TryParse(numero, out int numerador))
-    {
-        estoque.RemoverProdutos(numerador);
+    static void Opcao2(){
+        estoque.ListarProdutos();
     }
 
-} 
+    static void Opcao3(){
+        Console.WriteLine(" digite o numero do produto em sua lista ");
+        string numero = Console.ReadLine();
+        if (int.TryParse(numero, out int numerador))
+        {
+            estoque.RemoverProdutos(numerador);
+        }
+    }
+    static void Opcao4(){
+        Console.WriteLine(" digite o numero do produto em sua lista ");
+        string numero = Console.ReadLine();
+        if (int.TryParse(numero, out int numerador))
+        { 
+            Console.WriteLine(" digite a quantidade");
+            string quantidade = Console.ReadLine();
+            if (int.TryParse( quantidade,out int volume))
+            {
+                estoque.EntradaEstoque( volume, numerador);
+            }
+        }
+    } 
+    static void Opcao5 (){
+           Console.WriteLine(" digite o numero do produto em sua lista ");
+        string numero = Console.ReadLine();
+        if (int.TryParse(numero, out int numerador))
+        { 
+            Console.WriteLine(" digite a quantidade");
+            string quantidade = Console.ReadLine();
+            if (int.TryParse( quantidade,out int volume))
+            {
+                estoque.SaidaEstoque( volume, numerador);
+            }
+        }
+    }
 }
-
  class Pedras {
     public int Numero {get; set;}
     public string Nome {get; set;}
@@ -107,17 +132,16 @@ class Estoque{
             Numero = contador, Nome = nome, Valor = valor, Tipo = tipo, Fornecedor = fornecedor, Medida = medida, Estoque = 0
         };
 
-    pedras.Add(material);
-    contador++; Console.WriteLine("Produto adcionado");
+        pedras.Add(material);
+        contador++; Console.WriteLine("Produto adcionado");
 
     }
     public void ListarProdutos(){
         if (pedras.Count == 0)
-
-        {Console.WriteLine(" sua lista está vazia.");
-        
-            
-        }else
+        {
+            Console.WriteLine(" sua lista está vazia.");            
+        }
+        else
         {
             foreach (var  pedra in pedras)
             {
@@ -125,19 +149,48 @@ class Estoque{
             }
         }
     }
+
      public void RemoverProdutos(int numero){
         var produtoRemovido = pedras.FirstOrDefault(a=>a.Numero == numero);
         if (produtoRemovido == null)
-            
-    
-        { Console.WriteLine("Esse produto não existe.");
-            
+        { 
+            Console.WriteLine("Esse produto não existe.");
         }
-else
-{
-    pedras.Remove( produtoRemovido );
-     Console.WriteLine("Seu produto foi removido com sucesso.");
-}
+        else
+        {
+            pedras.Remove( produtoRemovido );
+            Console.WriteLine("Seu produto foi removido com sucesso.");
+        }
      }
 
+    public void EntradaEstoque(int quantidade, int numero){
+        var entrada = pedras.FirstOrDefault(a=>a.Numero == numero);
+        if ( entrada == null)
+        { 
+            Console.WriteLine(" Esse produto não existe");
+        }
+        else
+        {
+            entrada.Estoque+=quantidade;
+            Console.WriteLine(" estoque atualizado com sucesso ");
+        }
+    }
+    public void SaidaEstoque(int quantidade, int numero){
+        var saida = pedras.FirstOrDefault(a=>a.Numero == numero);
+        if (saida == null)
+
+        {Console.WriteLine(" Esse produto não existe");
+            
+        }
+        else
+        {
+            if( saida.Estoque>= quantidade){
+                saida.Estoque-=quantidade;
+                Console.WriteLine(" estoque atualizado");
+
+            }
+            else {Console.WriteLine("quantidade insuficiente");}
+
+        }
+    }
 }
